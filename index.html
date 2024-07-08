@@ -6,15 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="script.js"></script>
-    <style>
-        .active-page {
-            background-color: teal !important;
-            color: white;
-        }
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .active-page {
+                background-color: teal !important;
+                color: white;
+            }
 
-        .disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
+            .disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+
+            th.selected-column {
+                background-color: #f0f0f0;
+                color: red;
+            }
         }
     </style>
 </head>
@@ -316,13 +323,20 @@
                         <table class="w-full overflow-scroll">
                             <thead>
                                 <tr class="m-3">
-                                    <th data-column="ten" data-order="desc" class="w-3/12 text-left text-slate-400 font-bold cursor-pointer">TÊN &#9650</th>
-                                    <th data-column="mssv" data-order="desc" class="text-left text-slate-400 font-bold cursor-pointer">MSSV &#9650</th>
-                                    <th data-column="email" data-order="desc" class="text-left text-slate-400 font-bold cursor-pointer">EMAIL &#9650</th>
-                                    <th data-column="khoa" data-order="desc" class="text-left text-slate-400 font-bold cursor-pointer">KHOA &#9650</th>
-                                    <th data-column="lop" data-order="desc" class="text-left text-slate-400 font-bold cursor-pointer">LỚP &#9650</th>
-                                    <th data-column="gioitinh" data-order="desc" class="text-left text-slate-400 font-bold cursor-pointer">GIỚI TÍNH &#9650</th>
-                                    <th data-column="ngaysinh" data-order="desc" class="text-left text-slate-400 font-bold cursor-pointer">NGÀY SINH &#9650</th>
+                                    <th data-column="ten" data-order="desc"
+                                        class="w-3/12 text-left text-slate-400 font-bold cursor-pointer">TÊN &#9650</th>
+                                    <th data-column="mssv" data-order="desc"
+                                        class="text-left text-slate-400 font-bold cursor-pointer">MSSV &#9650</th>
+                                    <th data-column="email" data-order="desc"
+                                        class="text-left text-slate-400 font-bold cursor-pointer">EMAIL &#9650</th>
+                                    <th data-column="khoa" data-order="desc"
+                                        class="text-left text-slate-400 font-bold cursor-pointer">KHOA &#9650</th>
+                                    <th data-column="lop" data-order="desc"
+                                        class="text-left text-slate-400 font-bold cursor-pointer">LỚP &#9650</th>
+                                    <th data-column="gioitinh" data-order="desc"
+                                        class="text-left text-slate-400 font-bold cursor-pointer">GIỚI TÍNH &#9650</th>
+                                    <th data-column="ngaysinh" data-order="desc"
+                                        class="text-left text-slate-400 font-bold cursor-pointer">NGÀY SINH &#9650</th>
                                     <th class="w-1/12 text-center text-slate-400 font-bold">CHỈNH SỬA</th>
                                 </tr>
                             </thead>

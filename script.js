@@ -413,8 +413,12 @@ document.querySelectorAll('th').forEach(th => {
                 let otherText = otherTh.textContent.replace(/[▲▼]/g, '').trim();
                 otherTh.setAttribute('data-order', 'desc'); // Đặt lại thuộc tính data-order thành 'desc'
                 otherTh.innerHTML = otherText + ' &#9650;'; // Thêm mũi tên hướng lên
+                otherTh.classList.remove('selected-column'); // Loại bỏ lớp
             }
         });
+
+        // Thêm hoặc thay đổi lớp 'selected-column' cho cột được chọn
+        th.classList.add('selected-column');
 
         if(order == 'desc'){
             th.setAttribute('data-order', 'asc');
